@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -18,7 +19,7 @@ export default function Header() {
 
       {/* Nav Links */}
       <nav className="nav-section">
-        <a href="#" className="nav-link active">Pricing</a>
+        <Link to={"#"} className="nav-link active">Pricing</Link>
 
         <div
           className="nav-link dropdown"
@@ -27,9 +28,9 @@ export default function Header() {
           Resources <span className="arrow">⌄</span>
           {openDropdown === "resources" && (
             <div className="dropdown-content">
-              <a href="#">Docs</a>
-              <a href="#">Tutorials</a>
-              <a href="#">Examples</a>
+              <Link to={"#"}>Docs</Link>
+              <Link to={"#"}>Tutorials</Link>
+              <Link to={"#"}>Examples</Link>
             </div>
           )}
         </div>
@@ -41,14 +42,14 @@ export default function Header() {
           Community <span className="arrow">⌄</span>
           {openDropdown === "community" && (
             <div className="dropdown-content">
-              <a href="#">Blog</a>
-              <a href="#">Forum</a>
-              <a href="#">Events</a>
+              <Link to={"#"}>Blog</Link>
+              <Link to={"#"}>Forum</Link>
+              <Link to={"#"}>Events</Link>
             </div>
           )}
         </div>
 
-        <a href="#" className="nav-link">Download</a>
+        <Link to={"#"} className="nav-link">Download</Link>
       </nav>
 
       {/* Right Buttons */}
