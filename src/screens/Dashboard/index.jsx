@@ -50,15 +50,15 @@ export default function Dashboard() {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link 
                 className="nav-link dropdown-toggle"
-                href="#"
+                to={""}
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Community
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li><Link className="dropdown-item" to={""}>Action</Link></li>
                 <li><Link className="dropdown-item" to={""}>Another action</Link></li>
@@ -123,18 +123,18 @@ export default function Dashboard() {
             <div class="custom-border-glow"></div>
             <div class="custom-border-glow custom-border-glow-reverse"></div>
 
-            <a class="custom-button" href="/signup">
+            <Link class="custom-button" to={""}>
               <div class="custom-button-bg">
                 <div class="custom-glow-circle"></div>
                 <div class="custom-glow-gradient"></div>
               </div>
               <span>Start now</span>
-            </a>
+            </Link>
             {/* <!-- </div> --> */}
 
-            <a
+            <Link
               class="custom-btn-slack"
-              href="https://huly.link/slack"
+              to="https://huly.link/slack"
               target="_blank"
             >
               <img
@@ -142,13 +142,13 @@ export default function Dashboard() {
                 alt=""
               />
               <span>Join our Slack</span>
-            </a>
+            </Link>
           </div>
         </div>
 
         <img
           class="custom-image-desktop"
-          src="./images/image (12).png"
+          src="../../assets/images/image (12).png"
           alt=""
         />
         {/* <!-- <img
