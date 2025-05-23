@@ -1,0 +1,136 @@
+/* Overall container split 50/50 */
+.contact-page {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Left side with background image */
+.left-side {
+  flex: 1.7;
+  background: url("../../assets/images/contactus.jpeg") no-repeat center;
+  filter: brightness(0.85);
+  background-size: cover;
+
+}
+
+/* Right side form container */
+.right-side {
+  flex: 1;
+  background: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.05);
+}
+
+.right-side h2 {
+  font-size: 2.8rem;
+  color: #0a58ca;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Form styles */
+.contact-form {
+  max-width: 420px;
+  width: 100%;
+}
+
+/* Floating label input container */
+.floating-input-group {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* Inputs and textarea */
+.floating-input {
+  width: 100%;
+  padding: 16px 12px 12px 12px; /* top padding bigger for label */
+  font-size: 1rem;
+  border: 2px solid #b8d1f4;
+  border-radius: 8px;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  resize: vertical; /* for textarea */
+}
+
+/* Label style */
+.floating-input-group label {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  color: #888;
+  font-size: 1rem;
+  font-weight: 500;
+  pointer-events: none;
+  background: rgb(255, 255, 255);
+  padding: 0 4px;
+  transition: all 0.3s ease;
+  transform-origin: left top;
+  border-radius: 4px;
+}
+
+/* When input is focused or has text, move label up */
+.floating-input:focus + label,
+.floating-input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 0.75rem;
+  color: #0a58ca;
+  font-weight: 600;
+}
+
+/* Error styles */
+.input-error {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.5) !important;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.775rem;
+  margin-top: 6px;
+  font-weight: 200;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  background: #0a58ca;
+  color: white;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #084a9c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .contact-page {
+    flex-direction: column;
+  }
+  .left-side,
+  .right-side {
+    flex: none;
+    height: 50vh;
+    width: 100%;
+  }
+  .right-side {
+    padding: 40px 30px;
+  }
+  .contact-form {
+    max-width: 100%;
+  }
+}

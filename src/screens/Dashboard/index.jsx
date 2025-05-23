@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import waves from "../../assets/images/waves.mp4";
-import clockImage from "../../assets/images/image (12).png";
-import clockVideo from "../../assets/images/clock.mp4";
+
 export default function Dashboard() {
+  const navigate = useNavigate();
   return (
     <>
       <div
@@ -13,9 +13,68 @@ export default function Dashboard() {
       >
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
-            <Link to={'/'}>
-            <img src={logo} alt="" className="img-fluid" />
+            <Link to={"/"}>
+              <img src={logo} alt="" className="img-fluid" />
             </Link>
+            <div
+              style={{
+                position: "absolute",
+                top: "320px",
+                left: "80px",
+                color: "#000", // Adjust text color as needed
+                padding: "10px 15px",
+                borderRadius: "5px",
+                marginLeft: "60px",
+              }}
+            >
+              <div
+                style={{
+                  padding: "16px",
+                  fontFamily: "'Poppins', 'Segoe UI', sans-serif",
+                  color: "white",
+                }}
+              >
+                <h5 style={{ margin: 0, fontSize: "40px" }}>
+                  Technological Acumen at your service
+                </h5>
+                <div style={{ marginLeft: "10px" }}>
+                  <p style={{ margin: "4px 0", fontSize: "16px" }}>
+                    Code with Purpose, Consult with Insight, and Conquer every
+                    Challenge.
+                  </p>
+                  <p style={{ margin: "9px 0", fontSize: "16px" }}>
+                    From Vision to Strategy, and From Strategy to Software — We
+                    Build Seamlessly.
+                  </p>
+                </div>
+              </div>
+
+              <button
+                onClick={() => {
+                  navigate("/contactUs");
+                }}
+                type="button"
+                className="btn b btn-sm d-flex align-items-center"
+                style={{
+                  justifyContent: "center", // ⬅️ centers content horizontally
+                  gap: "5px",
+                  background:
+                    "linear-gradient(90deg, rgba(243, 173, 99, 0.66), #ffffff)",
+                  border: "none",
+                  color: "#000",
+                  fontWeight: "bold",
+                  padding: "6px 12px",
+                  width: "230px",
+                  borderRadius: "20px",
+                  cursor: "pointer",
+                  textAlign: "center",
+                  marginLeft: "17px",
+                }}
+              >
+                Get in Touch
+                <span style={{ fontWeight: "bold" }}>→</span>
+              </button>
+            </div>
             <button
               className="navbar-toggler"
               type="button"
@@ -84,8 +143,8 @@ export default function Dashboard() {
                     Get Started
                   </Link>
                 </li>
-                <li className="nav-item" >
-                  <Link  className="nav-link active" aria-current="page" to={""}>
+                <li className="nav-item">
+                  <Link className="nav-link active" aria-current="page" to={""}>
                     Sign In
                   </Link>
                 </li>
@@ -115,67 +174,6 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
-
-      <section className="custom-section">
-        <div className="custom-container">
-          <div className="custom-text-wrapper">
-            <h2 className="custom-heading">Join the Movement</h2>
-            <p className="custom-paragraph">
-              Unlock the future of productivity with Huly.
-              <br />
-              Remember, this journey is just getting started.
-            </p>
-            <div className="custom-button-wrapper">
-              {/* <!-- <div className="custom-button-wrapper"> --> */}
-              <div className="custom-border-glow"></div>
-              <div className="custom-border-glow custom-border-glow-reverse"></div>
-
-              <Link className="custom-button" to={""}>
-                <div className="custom-button-bg">
-                  <div className="custom-glow-circle"></div>
-                  <div className="custom-glow-gradient"></div>
-                </div>
-                <span>Start now</span>
-              </Link>
-              {/* <!-- </div> --> */}
-
-              <Link
-                className="custom-btn-slack"
-                to="https://huly.link/slack"
-                target="_blank"
-              >
-                <img
-                  src="/_next/static/media/68af230db56f9e75d64156987f7e1b09.svg"
-                  alt=""
-                />
-                <span>Join our Slack</span>
-              </Link>
-            </div>
-          </div>
-
-          <img className="custom-image-desktop" src={clockImage} alt="" />
-
-          <div className="custom-video-container">
-            <video autoPlay loop muted playsInline>
-              <source src={clockVideo} type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </section>
-      <div className="bottom-bar">
-        <div className="container">
-          <div className="d-flex justify-content-between">
-            <p className="copyrightText">
-              Copyright © 2025 Huly Labs. All rights reserved.
-            </p>
-            <div className="d-flex justify-content-center gap-4 align-items-center">
-              <Link to={'/terms-and-conditions'} className="copyrightText">Terms of Service</Link>
-              <Link to={'/privacy-policy'} className="copyrightText">Privacy Policy</Link>
-            </div>
-          </div>
-        </div>
-        
-      </div>
     </>
   );
 }
