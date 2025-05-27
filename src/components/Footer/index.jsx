@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import clockImage from "../../assets/images/image (12).png";
-import clockVideo from "../../assets/images/clock.mp4";
 
 export default function Footer() {
   return (
