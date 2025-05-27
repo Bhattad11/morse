@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/Morse.png";
-import secondLogo from '../../assets/images/Banner.jpeg'
+import secondLogo from '../../assets/images/Banner.mp4'
 export default function Dashboard() {
   const navigate = useNavigate();
   return (
@@ -11,7 +11,21 @@ export default function Dashboard() {
         style={{ minHeight: "100vh" }}
       >
         <div style={{top:450,position:'absolute',left:325}}>
-          <img src={secondLogo} alt="Decor" className="second-image" style={{height:430,width:900,borderRadius:10}} />
+        <video
+  className="position-absolute inset-0"
+  width="1920"
+  height="1185"
+  autoPlay
+  loop
+  muted
+  playsInline
+  style={{ height: 430, width: 900, borderRadius: 10, opacity: 1 }}
+>
+  <source src={secondLogo} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+          {/* <img src={secondLogo} alt="Decor" className="second-image" style={{height:430,width:900,borderRadius:10}} /> */}
           </div>
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
