@@ -1,8 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/Morse.png";
-import waves from "../../assets/images/waves.mp4";
-
+import secondLogo from '../../assets/images/Banner.jpeg'
 export default function Dashboard() {
   const navigate = useNavigate();
   return (
@@ -11,6 +10,9 @@ export default function Dashboard() {
         className="main-banner container-fluig border-0"
         style={{ minHeight: "100vh" }}
       >
+        <div style={{top:450,position:'absolute',left:325}}>
+          <img src={secondLogo} alt="Decor" className="second-image" style={{height:430,width:900,borderRadius:10}} />
+          </div>
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
             <Link to={"/"}>
@@ -20,7 +22,7 @@ export default function Dashboard() {
             <div
               style={{
                 position: "absolute",
-                top: "320px",
+                top: "200px",
                 left: "80px",
                 color: "#000", // Adjust text color as needed
                 padding: "10px 15px",
@@ -43,10 +45,7 @@ export default function Dashboard() {
                     Code with Purpose, Consult with Insight, and Conquer every
                     Challenge.
                   </p>
-                  <p style={{ margin: "9px 0", fontSize: "16px" }}>
-                    From Vision to Strategy, and From Strategy to Software — We
-                    Build Seamlessly.
-                  </p>
+                  
                 </div>
               </div>
 
@@ -154,12 +153,12 @@ export default function Dashboard() {
           </div>
         </nav>
       </div>
-      <section className="overflow-hidden">
-        <div className="py-60 position-realtive">
+      <section className="overflow-hidden mid-image">
+        <div >
           <div className="container">
             <div className="video-wrapper">
               <div className="background-image-wrapper">
-                <video
+                {/* <video
                   className="position-absolute inset-0"
                   width="1920"
                   height="1185"
@@ -169,7 +168,21 @@ export default function Dashboard() {
                   style={{ opacity: 1 }}
                 >
                   <source src={waves} type="video/mp4" />
-                </video>
+                </video> */}
+                <div  style={{
+                position: "absolute",
+                top: "10px",
+                left: "10px",
+                color: "#000", // Adjust text color as needed
+                padding: "10px 15px",
+                borderRadius: "5px",
+                marginLeft: "60px",
+              }}>
+                <p style={{ margin: "9px 0", fontSize: "22px",color:'white' }}>
+                    From Vision to Strategy, and From Strategy to Software — We
+                    Build Seamlessly.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
