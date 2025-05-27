@@ -15,7 +15,7 @@ export default function Dashboard() {
           <div className="container">
             <Link to={"/"}>
               <img src={logo} alt="" className="img-fluid" 
-              style={{height:'70px',width:'70px',objectFit: 'cover'}}/>
+              style={{height:'80px',width:'120px',objectFit: 'cover'}}/>
             </Link>
             <div
               style={{

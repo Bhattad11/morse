@@ -11,7 +11,8 @@ export default function Header() {
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
             <Link to={'/'}>
-            <img src={logo} alt="" className="img-fluid"               style={{height:'70px',width:'70px',objectFit: 'cover'}}/>
+            <img src={logo} alt="" className="img-fluid"               
+            style={{height:'80px',width:'120px',objectFit: 'cover'}}/>
             
             </Link>
             <button
