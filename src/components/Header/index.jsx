@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Morse.png";
 
 export default function Header() {
   return (
@@ -11,7 +11,8 @@ export default function Header() {
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
             <Link to={'/'}>
-            <img src={logo} alt="" className="img-fluid" />
+            <img src={logo} alt="" className="img-fluid"               style={{height:'70px',width:'70px',objectFit: 'cover'}}/>
+            
             </Link>
             <button
               className="navbar-toggler"
@@ -81,11 +82,11 @@ export default function Header() {
                     Get Started
                   </Link>
                 </li>
-                <li className="nav-item" >
+                {/* <li className="nav-item" >
                   <Link  className="nav-link active" aria-current="page" to={""}>
                     Sign In
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

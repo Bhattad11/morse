@@ -10,11 +10,8 @@ function About() {
       name: "Rahul Sharma",
       role: "Lead Software Engineer",
     },
-    { emoji: "👩‍💼", name: "Sneha Jain", role: "Product Manager" },
-    { emoji: "🧑‍🔬", name: "Aman Verma", role: "AI Researcher" },
     { emoji: "🧑‍💼", name: "Aniket", role: "Managing Director" },
     { emoji: "🧑‍💼", name: "Anay Gupta", role: "Manager" },
-    { emoji: "👤", name: "Alex Doe", role: "Design Specialist" },
   ];
   return (
     <div className="about-page">

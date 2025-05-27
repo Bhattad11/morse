@@ -1,30 +1,38 @@
-/* Overall container split 50/50 */
+/* Assuming your header is 60px tall */
 .contact-page {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 60px); /* full viewport minus header */
+  /* margin-top: 60px; push content below header */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
 }
 
-/* Left side with background image */
-.left-side {
-  flex: 1.7;
-  background: url("../../assets/images/contactus.jpeg") no-repeat center;
-  filter: brightness(0.85);
-  background-size: cover;
-
-}
-
-/* Right side form container */
+/* Make right side scrollable if content overflows */
 .right-side {
   flex: 1;
   background: #fff;
   padding: 60px 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* start at top */
   box-shadow: -5px 0 20px rgba(0,0,0,0.05);
+  overflow-y: auto; /* enable vertical scroll */
+  max-height: 100%; /* limit to container height */
 }
+.left-side {
+  flex: 1.7;
+  background: url("../../assets/images/contactus.jpeg") no-repeat center;
+  filter: brightness(0.85);
+  background-size: cover;
+}
+
+/* Responsive fix for small height screens */
+@media (max-height: 600px) {
+  .right-side {
+    padding: 20px 20px;
+  }
+}
+
 
 .right-side h2 {
   font-size: 2.8rem;
@@ -120,17 +128,70 @@
 @media (max-width: 900px) {
   .contact-page {
     flex-direction: column;
+    height: auto; /* let height grow with content */
   }
+  
   .left-side,
   .right-side {
     flex: none;
-    height: 50vh;
     width: 100%;
+    height: auto; /* remove fixed 50vh */
+    min-height: 200px; /* enough space for the image and form */
   }
+  
+  .left-side {
+    /* Keep background covering but allow height auto */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.85);
+    min-height: 250px;
+  }
+  
   .right-side {
-    padding: 40px 30px;
+    padding: 30px 20px;
+    box-shadow: none;
+    max-height: 70vh;
+    overflow-y: auto;
   }
+  
+  .right-side h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
   .contact-form {
     max-width: 100%;
+  }
+  
+  .floating-input,
+  .floating-input-group label {
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Very small screens (phones) */
+@media (max-width: 480px) {
+  .right-side {
+    padding: 20px 15px;
+    max-height: none;
+  }
+  
+  .right-side h2 {
+    font-size: 1.6rem;
+  }
+  
+  .floating-input,
+  .floating-input-group label {
+    font-size: 0.85rem;
+  }
+  
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }

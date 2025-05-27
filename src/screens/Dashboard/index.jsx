@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Morse.png";
 import waves from "../../assets/images/waves.mp4";
 
 export default function Dashboard() {
@@ -14,7 +14,8 @@ export default function Dashboard() {
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
             <Link to={"/"}>
-              <img src={logo} alt="" className="img-fluid" />
+              <img src={logo} alt="" className="img-fluid" 
+              style={{height:'70px',width:'70px',objectFit: 'cover'}}/>
             </Link>
             <div
               style={{
@@ -139,15 +140,15 @@ export default function Dashboard() {
               </ul>
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to={""}>
+                  <Link className="nav-link active" aria-current="page" to={"/contactUs"}>
                     Get Started
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to={""}>
                     Sign In
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

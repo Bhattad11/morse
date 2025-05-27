@@ -62,10 +62,10 @@ export default function TermsAndConditions() {
           <p className="text-secondary">
             For any inquiries, email us at:{' '}
             <Link
-              to="mailto:anay.gupta@morseconsulting.com"
+              to="mailto:admin@morseconsulting.com"
               className="text-decoration-none text-primary fw-medium"
             >
-              anay.gupta@morseconsulting.com
+              admin@morseconsulting.com
             </Link>
           </p>
         </Section>

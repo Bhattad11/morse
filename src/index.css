@@ -72,7 +72,15 @@ body {
   padding: 152px 0 294px;
 }
 .bottom-bar {
-  background-color: #090a0c;
+  display: flex; /* ensure flex */
+  align-items: center; /* vertical centering */
+  height: 80px; /* or any fixed height you want */
+  background-color: #0b0c0f;
+}
+
+.bottom-container {
+  width: 100%;
+  
 }
 @media (max-width: 992px) {
   .custom-section {

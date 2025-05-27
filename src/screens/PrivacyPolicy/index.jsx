@@ -61,8 +61,8 @@ export default function PrivacyPolicy() {
         <Section title="7. Contact Us">
           <p className="text-secondary">
             If you have questions, contact us at:{' '}
-            <Link to="mailto:anay.gupta@morseconsulting.com" className="text-decoration-none text-primary fw-medium">
-              anay.gupta@morseconsulting.com
+            <Link to="mailto:admin@morseconsulting.com" className="text-decoration-none text-primary fw-medium">
+              admin@morseconsulting.com
             </Link>
           </p>
         </Section>
