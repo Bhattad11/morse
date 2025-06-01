@@ -1,37 +1,27 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/Morse.png";
-import secondLogo from '../../assets/images/Banner.mp4'
+import secondLogo from "../../assets/images/Morse.png";
+
 export default function Dashboard() {
   const navigate = useNavigate();
   return (
     <>
       <div
-        className="main-banner container-fluig border-0"
+        className="main-banner container-fluid border-0"
         style={{ minHeight: "100vh" }}
       >
-        <div style={{top:450,position:'absolute',left:325}}>
-        <video
-  className="position-absolute inset-0"
-  width="1920"
-  height="1185"
-  autoPlay
-  loop
-  muted
-  playsInline
-  style={{ height: 430, width: 900, borderRadius: 10, opacity: 1 }}
->
-  <source src={secondLogo} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
-
-          {/* <img src={secondLogo} alt="Decor" className="second-image" style={{height:430,width:900,borderRadius:10}} /> */}
-          </div>
+        <div style={{ top: 450, position: "absolute", left: '60%' }}>
+           </div>
         <nav className="navbar navbar-expand-md bg-body-tertiary">
           <div className="container">
             <Link to={"/"}>
-              <img src={logo} alt="" className="img-fluid" 
-              style={{height:'80px',width:'120px',objectFit: 'cover'}}/>
+              <img
+                src={logo}
+                alt=""
+                className="img-fluid"
+                style={{ height: "80px", width: "120px", objectFit: "cover" }}
+              />
             </Link>
             <div
               style={{
@@ -49,6 +39,7 @@ export default function Dashboard() {
                   padding: "16px",
                   fontFamily: "'Poppins', 'Segoe UI', sans-serif",
                   color: "white",
+
                 }}
               >
                 <h5 style={{ margin: 0, fontSize: "40px" }}>
@@ -59,7 +50,6 @@ export default function Dashboard() {
                     Code with Purpose, Consult with Insight, and Conquer every
                     Challenge.
                   </p>
-                  
                 </div>
               </div>
 
@@ -153,55 +143,36 @@ export default function Dashboard() {
               </ul>
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to={"/contactUs"}>
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to={"/contactUs"}
+                  >
                     Get Started
                   </Link>
                 </li>
-                {/* <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to={""}>
-                    Sign In
-                  </Link>
-                </li> */}
+              
               </ul>
             </div>
           </div>
         </nav>
       </div>
-      <section className="overflow-hidden mid-image">
-        <div >
-          <div className="container">
-            <div className="video-wrapper">
-              <div className="background-image-wrapper">
-                {/* <video
-                  className="position-absolute inset-0"
-                  width="1920"
-                  height="1185"
-                  autoplay=""
-                  loop=""
-                  playsinline=""
-                  style={{ opacity: 1 }}
-                >
-                  <source src={waves} type="video/mp4" />
-                </video> */}
-                <div  style={{
-                position: "absolute",
-                top: "10px",
-                left: "10px",
-                color: "#000", // Adjust text color as needed
-                padding: "10px 15px",
-                borderRadius: "5px",
-                marginLeft: "60px",
-              }}>
-                <p style={{ margin: "9px 0", fontSize: "22px",color:'white' }}>
-                    From Vision to Strategy, and From Strategy to Software — We
-                    Build Seamlessly.
-                  </p>
-                </div>
-              </div>
-            </div>
+
+
+
+      <section className="">
+        <div className="background-image">
+          <div>
+            <p className="text-content">
+              From Vision to Strategy, and From Strategy to Software — We
+              Build Seamlessly.
+            </p>
           </div>
         </div>
       </section>
+
+
+      {/*  */}
     </>
   );
 }

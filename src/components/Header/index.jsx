@@ -5,7 +5,7 @@ import logo from "../../assets/images/Morse.png";
 export default function Header() {
   return (
     <div
-        className=" container-fluig border-0 " 
+        className=" container-fluid border-0 " 
         style={{ background:'black' }}
       >
         <nav className="navbar navbar-expand-md bg-body-tertiary">
