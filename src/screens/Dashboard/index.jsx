@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/Morse.png";
-import secondLogo from "../../assets/images/Morse.png";
 
 export default function Dashboard() {
   const navigate = useNavigate();
